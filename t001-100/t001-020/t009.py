@@ -1,4 +1,7 @@
 class Solution:
+    """ 9
+    判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。
+    """
     def isPalindrome(self, x):
         """
         :type x: int
@@ -19,6 +22,7 @@ class Solution:
                 i += 1
                 j -= 1
             return True
+
 
 if __name__ == "__main__":
     func = Solution().isPalindrome

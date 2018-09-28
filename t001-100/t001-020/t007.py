@@ -1,4 +1,7 @@
 class Solution:
+    """ 7
+    给定一个 32 位有符号整数，将整数中的数字进行反转。
+    """
     def reverse(self, x):
         """
         :type x: int
@@ -18,6 +21,7 @@ class Solution:
         if result > 2**31 or result < -2**31:
             return 0
         return result * y // abs(y)
+
 
 if __name__ == "__main__":
     func = Solution().reverse

@@ -1,4 +1,11 @@
 class Solution:
+    """ 6
+    将字符串 "PAYPALISHIRING" 以Z字形排列成给定的行数：
+        P   A   H   N
+        A P L S I I G
+        Y   I   R
+    之后从左往右，逐行读取字符："PAHNAPLSIIGYIR"
+    """
     def convert(self, s, numRows):
         """
         :type s: str
@@ -19,6 +26,7 @@ class Solution:
                 result += s[j]
                 j += step
         return result
+
 
 if __name__ == "__main__":
     func = Solution().convert

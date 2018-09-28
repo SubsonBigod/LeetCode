@@ -16,6 +16,7 @@ class Solution:
                 st += s[st:i].index(s[i]) + 1
         return length
 
+
 if __name__ == "__main__":
     func = Solution().lengthOfLongestSubstring
     assert 3 == func("abcabcbb")
