@@ -9,10 +9,31 @@ class Solution:
         :type prices: List[int]
         :rtype: int
         """
-        i, j = 0, len(prices)-1
-        while i < j:
-            pass
+        if len(prices) < 2:
+            return 0
+        i, in_price = 1, prices[0]
+        result = 0
+        while i < len(prices):
+            while i < len(prices):
+                if prices[i] <= in_price:
+                    in_price = prices[i]
+                else:
+                    break
+                i += 1
+            j = i
+            while j < len(prices):
+                if prices[j] > in_price and result < prices[j] - in_price:
+                    result = prices[j] - in_price
+                j += 1
+            while i < len(prices):
+                if prices[i] <= in_price:
+                    in_price = prices[i]
+                    i += 1
+                    break
+                i += 1
+        return result
 
 
 if __name__ == '__main__':
     func = Solution().maxProfit
+    print(func([7, 1, 5, 3, 6, 4]))
